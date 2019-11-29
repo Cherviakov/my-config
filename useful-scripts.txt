@@ -1,0 +1,2 @@
+# show list of files changed in given commit
+git show some-hash | grep 'diff --git' | sed -e 's/[^a]*a//' | sed -e 's/\sb.*//'
