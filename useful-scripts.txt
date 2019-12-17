@@ -1,2 +1,4 @@
 # show list of files changed in given commit
 git show some-hash | grep 'diff --git' | sed -e 's/[^a]*a//' | sed -e 's/\sb.*//'
+# show distinct list of user emails who present in git history
+git shortlog HEAD -se | sed -ne 's/^.*<//p' | sed -ne 's/>//p'| sort -u
