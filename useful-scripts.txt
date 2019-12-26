@@ -2,3 +2,5 @@
 git show some-hash | grep 'diff --git' | sed -e 's/[^a]*a//' | sed -e 's/\sb.*//'
 # show distinct list of user emails who present in git history
 git shortlog HEAD -se | sed -ne 's/^.*<//p' | sed -ne 's/>//p'| sort -u
+# get first frame from webm video, convert it to png and optimizes
+cat in.webm | ffmpeg -loglevel 16 -f webm -i pipe: -frames:v 1 -f image2pipe -vcodec png - | pngquant -s 1 -Q 20 - > out.png
