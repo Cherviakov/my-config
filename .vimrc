@@ -20,9 +20,15 @@ set number
 set lazyredraw
 set showmatch
 set hlsearch
+set ignorecase
+set smartcase
 set autoindent
 set spelllang=en
 set spell
+set shiftround
+set linebreak
+set dir=~/.vim-swap-files
+set history=1000
 
 filetype indent on
 
