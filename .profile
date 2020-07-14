@@ -7,6 +7,7 @@ alias insecure="ecryptfs-add-passphrase > /dev/null 2>&1;mount.ecryptfs_private 
 alias secure="umount.ecryptfs_private secret"
 alias hostport="nc -z -v -w 10 $1 $2"
 alias screenshot="import ~/Pictures/screenshots/$(date +"%H-%M-%S-%d-%m-%Y").png"
+alias wine32="WINEPREFIX=~/prefix32/ WINEARCH=win32 wine"
 
 # change terminal colors
 export PS1="\[\033[1;32m\]\u@\h \d \t \[\033[1;33m\]\w \$ \[\033[0;00m\]"
