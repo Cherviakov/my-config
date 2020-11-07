@@ -27,3 +27,13 @@ sudo du -ach -t 500MB . | sort -rh
 
 # list endpoints of nodejs express server
 grep -rnwo -E "'(\/:?\w+)+'" .
+
+# expand to multiple words
+echo bash{,e{d,s},ful{,ly,ness},ing}
+
+# declare simple function in terminal
+myfunc () { echo "Hello world!"; }
+
+# use declared function in another bash
+sudo bash -c "$(declare -f myfunc); myfunc"
+ssh somevm "$(declare -f myfunc); myfunc"
